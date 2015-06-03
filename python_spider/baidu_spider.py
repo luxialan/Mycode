@@ -27,14 +27,14 @@ def getImage(html, save_p):  #定义getImage()函数，用来获取图片地址�
         except:
             print 'some err in downing picture'
 
-name = raw_input("朕只要美男纸和漂亮的女人的名字： ")
+name = raw_input("the save file name: ")
 save_p = 'C:\\out_image\\' + name + '_baidu'
 
 isExists=os.path.exists(save_p)
 
 if not isExists:
     os.mkdir(save_p)
-    uri = raw_input("朕要纳入后宫，告诉网址： ")
+    uri = raw_input("the website: ")
     r = r'^http://'
     if re.match(r,uri):
         html2 = getHtml(uri)
@@ -42,5 +42,5 @@ if not isExists:
         html2 = getHtml("http://" + uri)
     getImage(html2, save_p)
 else:
-    print '此人朕已纳入后宫'
+    print 'Over!'
 
