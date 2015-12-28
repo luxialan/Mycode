@@ -1,4 +1,4 @@
-#copyright shangxuan@SYSU
+
 #usage cd caffe
 #usage python ctrip.py $your_file_list
 import numpy as np
